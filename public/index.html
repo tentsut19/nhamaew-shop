@@ -143,7 +143,7 @@ body {
         }
         .details {
             text-align: left;
-            margin: 20px 0;
+            /* margin: 20px 0; */
         }
         .details p {
             margin: 10px 0;
@@ -154,7 +154,7 @@ body {
         }
         .details_shop {
             text-align: left;
-            margin: 20px 0;
+            /* margin: 20px 0; */
         }
         .details_shop p {
             margin: 10px 0;
@@ -195,7 +195,7 @@ body {
     }
 
     .details_hide_detail {
-        height: 120px;overflow: hidden;
+        height: 112px;overflow: hidden;
     }
 
     .details_show_detail {
@@ -226,6 +226,26 @@ body {
     hr {
       border-top: 3px solid #CBBAAE;
     }
+
+    .dropdown-button {
+            background-color: #4CAF50; /* สีพื้นหลัง */
+            color: white; /* สีตัวอักษร */
+            padding: 15px 20px; /* ช่องว่างรอบๆ ตัวอักษร */
+            font-size: 16px; /* ขนาดตัวอักษร */
+            border: none; /* ไม่มีขอบ */
+            cursor: pointer; /* เปลี่ยนเป็นลูกศรเมื่อเอาเม้าส์ไปวาง */
+            border-radius: 5px; /* มุมมน */
+            position: relative; /* เพื่อให้ลูกศรอยู่ในตำแหน่งที่ต้องการ */
+        }
+
+        .dropdown-button::after {
+            content: '▼'; /* ลูกศรชี้ลง */
+            font-size: 12px; /* ขนาดลูกศร */
+            position: absolute; /* ตำแหน่งแนบกับปุ่ม */
+            right: 10px; /* ระยะห่างจากขอบขวา */
+            top: 50%; /* อยู่กลางแนวตั้ง */
+            transform: translateY(-50%); /* ปรับให้ลูกศรอยู่กึ่งกลางแนวตั้ง */
+        }
     </style>
 </head>
 <body>
@@ -262,11 +282,12 @@ body {
                       <li>สารเสริมกระตุ้นภูมิคุ้มกัน</li>
                       <li>สารเสริมปรับสมดุลลำไส้</li>
                       <li>สเปรย์ทำแผล และ อุปกรณ์ทำแผล</li>
-                      <li>เจลเสริมพลังงาน และ เจลขับก่อนขน</li>
+                      <li>เจลเสริมพลังงาน และ เจลขับก้อนขน</li>
                       <li>ขนมแมวเลีย สำหรับบำรุง</li>
                       <li>ขนม สำหรับบำรุง</li>
                     </ul>
                 </div>
+                <center><img src="icon/down.png" style="width:6%;" alt="down"/></center>
                 <button style="font-family: 'thaisanslite_r1';" class="button-see-more"><b style="font-size: 24px;">ดูเพิ่มเติม</b></button>
                 <hr>
                 <div class="details_shop details_hide_detail">
@@ -278,6 +299,7 @@ body {
                     <li>มีคลินิกหน้าร้านพร้อมให้บริการ 6 สาขา ได้แก่ ไทรม้า(นนทบุรี) , บางศรีเมือง(นนทบุรี) , เสนานิคม (กรุงเทพ) , ปากน้ำ (สมุทรปราการ) , เจ้าคุณทหารลาดกระบัง (กรุงเทพ) , ประชาอุทิศ (สมุทรปราการ)</li>
                   </ul>
                 </div>
+                <center><img src="icon/down.png" style="width:6%;" alt="down"/></center>
                 <button style="font-family: 'thaisanslite_r1';" class="button-see-more-detail-shop"><b style="font-size: 24px;">ดูเพิ่มเติม</b></button>
                 <hr>
                 <a onclick="updateViewPet('MOYA')" class="button"><b style="font-size: 24px;">ไปที่ร้านค้า</b></a>
@@ -288,7 +310,7 @@ body {
                 <div class="views"><strong>เลือกแล้ว <strong id="viewNCHAM">0</strong> ครั้ง</strong><br>
                   <span class="join">(เข้าร่วม<span class="join" id="joinNCHAM"></span>)</span>
                 </div>
-                <div class="container-img"><img style="width: 55%" src="logo-N.cham.png" alt="NCHAM"></div>
+                <div class="container-img"><img src="logo-N.cham.png" alt="NCHAM"></div>
                 <hr>
                 <div class="details details_hide">
                     <p><strong>กลุ่มสินค้าที่มีจำหน่าย</strong></p>
@@ -297,7 +319,7 @@ body {
                       <li>อาหารสูตรรักษาโรค</li>
                       <li>อาหารเสริมบำรุงไต</li>
                       <li>กลุ่มป้องกันเห็บหมัด</li>
-                      <li>อาหารเสริมปรับสมดุลลำไส้ พรีไบโอติกและโพรไบโอติก</li>
+                      <li>อาหารเสริมปรับสมดุลลำไส้</li>
                       <li>อาหารเสริมกระตุ้นภูมิคุ้มกัน</li>
                       <li>อาหารเสริมบำรุงตับ</li>
                       <li>ผลิตภัณฑ์บำรุงขนและผิวหนัง</li>
@@ -310,10 +332,11 @@ body {
                       <li>อาหารสูตรตามสายพันธุ์ และตามช่วงวัย</li>
                       <li>อาหารเสริมบำรุงเลือด</li>
                       <li>อาหารเสริมพลังงาน</li>
-                      <li>เจลขับก่อนขน</li>
+                      <li>เจลขับก้อนขน</li>
                       <li>ขนมแมวเลีย และขนมบำรุงสุขภาพ</li>
                     </ul>
                 </div>
+                <center><img src="icon/down.png" style="width:6%;" alt="down"/></center>
                 <button style="font-family: 'thaisanslite_r1';" class="button-see-more"><b style="font-size: 24px;">ดูเพิ่มเติม</b></button>
                 <hr>
                 <div class="details_shop details_hide_detail">
@@ -327,6 +350,7 @@ body {
                     <li>ราคาไม่แพง</li>
                   </ul>
                 </div>
+                <center><img src="icon/down.png" style="width:6%;" alt="down"/></center>
                 <button style="font-family: 'thaisanslite_r1';" class="button-see-more-detail-shop"><b style="font-size: 24px;">ดูเพิ่มเติม</b></button>
                 <hr>
                 <a onclick="updateViewPet('N_CHAM')" class="button"><b style="font-size: 24px;">ไปที่ร้านค้า</b></a>
