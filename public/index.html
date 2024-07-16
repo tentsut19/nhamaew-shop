@@ -8,12 +8,12 @@
     
     <title>ร้านค้าโดยสัตวแพทย์</title>
     <link rel="icon" type="image/x-icon" href="cat.ico">
-    <link rel="stylesheet" href="bootstrap-combined.min.css">
-    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
-    <!-- <link rel="stylesheet" src="custom.css"> -->
+    <!-- เรียกใช้ Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" src="custom.css">
+    <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
     <style>
-       /* @import url('./bootstrap-combined.min.css'); */
-       #overlay {
+    #overlay {
         background: #ffffff;
         color: #666666;
         position: fixed;
@@ -36,443 +36,143 @@
         border-right-color: transparent;
         border-radius: 50%;
     }
+    .texto_grande {
+        font-size: 2.5rem;
+        color: white;
+    } 
+    #icone_grande {
+        font-size: 8rem;
+        color:#fff;
+    } 
 
-       @font-face {
+    @font-face {
+        font-family: 'OpenSauceOne';
+        src:  url('fonts/OpenSauceSans-Bold.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'THSarabun';
+        src:  url('fonts/THSarabun.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'SansSerif';
+        src:  url('fonts/SansSerif.ttf') format('truetype');
+    }
+
+    @font-face {
         font-family: 'thaisanslite_r1';
         src:  url('fonts/thaisanslite_r1.ttf') format('truetype');
     }
-
-#myCarousel {
-  margin-top: 10px;
-}
-
-.carousel-linked-nav,
-.item img {
-  display: block; 
-  /* margin: 0 auto; */
-}
-
-.carousel-linked-nav {
-  width: 120px;
-  margin-bottom: 20px;   
-}
-
-body {
-            font-family: 'thaisanslite_r1', sans-serif;
-            background-color: #f2e5d2;
-            /* display: flex; */
-            /* justify-content: center; */
-            /* align-items: center; */
-            /* height: 100vh; */
-            /* margin: 0; */
-        }
-        .container {
-            background-color: #fff;
-            border-radius: 10px;
-            /* width: 300px; */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-        }
-        .container img {
-            width: 38%;
-            height: auto;
-            /* margin-right: 40px; */
-        }
-        .views {
-            font-size: 12px;
-            /* color: #888; */
-            float: right;
-        }
-        .join {
-            font-size: 16px;
-            padding-top: 5px;
-        }
-        .title {
-            font-size: 24px;
-            font-weight: bold;
-            padding: 6px;
-            text-align: center;
-        }
-        .pages {
-            font-size: 22px;
-            padding: 6px;
-            text-align: center;
-        }
-        .price {
-            margin: 20px 0;
-        }
-        .price p {
-            display: flex;
-            justify-content: space-between;
-            margin: 5px 0;
-        }
-        .button {
-            display: block;
-            background-color: #d0a170;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 34px;
-            cursor: pointer;
-        }
-        .button-see-more {
-            background-color: #737373;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .button-see-more-detail-shop {
-            background-color: #737373;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .details {
-            text-align: left;
-            /* margin: 20px 0; */
-        }
-        .details p {
-            margin: 10px 0;
-        }
-        .details{
-            display: block;
-            unicode-bidi: isolate;
-        }
-        .details_shop {
-            text-align: left;
-            /* margin: 20px 0; */
-        }
-        .details_shop p {
-            margin: 10px 0;
-        }
-        .details_shop{
-            display: block;
-            unicode-bidi: isolate;
-        }
-        
-    .carousel-linked-nav.pagination {
-      display: flex; /* ใช้ flex เพื่อให้รายการเรียงกันแนวนอน */
-      list-style: none; /* ลบสัญลักษณ์หัวข้อรายการ */
-      padding: 0; /* ลบช่องว่างรอบ ๆ รายการ */
-      margin: 0; /* ลบช่องว่างรอบ ๆ รายการ */
-      justify-content: center; /* จัดกึ่งกลางรายการภายใน container */
-      width: 100%; /* ให้ container มีความกว้าง 100% */
-    }
-    .carousel-linked-nav.pagination li {
-      margin-right: 10px; /* เพิ่มช่องว่างระหว่างรายการ */
-    }
-    .carousel-linked-nav.pagination li:last-child {
-      margin-right: 0; /* ลบช่องว่างหลังรายการสุดท้าย */
-    }
-    .carousel-linked-nav.pagination li a {
-      text-decoration: none; /* ลบขีดเส้นใต้จากลิงก์ */
-      color: black; /* กำหนดสีข้อความ */
-    }
-    .carousel-linked-nav.pagination li.active a {
-      font-weight: bold; /* ข้อความหนาสำหรับรายการที่ active */
-    }
-
-    .details_hide {
-        height: 160px;overflow: hidden;
-    }
-
-    .details_show {
-        overflow: hidden;
-    }
-
-    .details_hide_detail {
-        height: 112px;overflow: hidden;
-    }
-
-    .details_show_detail {
-        overflow: hidden;
-    }
     
-
-    p {
-      font-size: 18px;
-    }
-
-    strong {
-      font-size: 20px;
-    }
-
-    li {
-      font-size: 18px;
-      margin: 4px;
-    }
-    .container-img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin-top: 40px;
+    body {
+        font-family: 'thaisanslite_r1', sans-serif;
+        background-color: #f2e5d2;
     }
 
     hr {
       border-top: 3px solid #CBBAAE;
     }
 
-    .dropdown-button {
-            background-color: #4CAF50; /* สีพื้นหลัง */
-            color: white; /* สีตัวอักษร */
-            padding: 15px 20px; /* ช่องว่างรอบๆ ตัวอักษร */
-            font-size: 16px; /* ขนาดตัวอักษร */
-            border: none; /* ไม่มีขอบ */
-            cursor: pointer; /* เปลี่ยนเป็นลูกศรเมื่อเอาเม้าส์ไปวาง */
-            border-radius: 5px; /* มุมมน */
-            position: relative; /* เพื่อให้ลูกศรอยู่ในตำแหน่งที่ต้องการ */
-        }
+    strong {
+      font-size: 18px;
+    }
 
-        .dropdown-button::after {
-            content: '▼'; /* ลูกศรชี้ลง */
-            font-size: 12px; /* ขนาดลูกศร */
-            position: absolute; /* ตำแหน่งแนบกับปุ่ม */
-            right: 10px; /* ระยะห่างจากขอบขวา */
-            top: 50%; /* อยู่กลางแนวตั้ง */
-            transform: translateY(-50%); /* ปรับให้ลูกศรอยู่กึ่งกลางแนวตั้ง */
-        }
+    p {
+      font-size: 18px;
+      margin-bottom: 0px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      padding: 6px;
+      text-align: center;
+    }
+
+    .title-animal-type {
+      text-align: left;
+    }
+
+    .body-animal-type {
+      text-align: left;
+    }
+
+    .title-view {
+      text-align: left;
+    }
+
+    .body-join {
+      text-align: left;
+    }
+    
+    .button-see-more {
+      background-color: #737373;
+      color: white;
+      padding: 0px;
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+      width: 90%;
+    }
+
     </style>
 </head>
 <body>
-<div id="overlay" style="display:none;">
-    <div class="spinner"></div>
-    <br/>
-    Loading...
-</div>
-
-    <div id="myCarousel" class="carousel slide" style="margin-bottom: 10px;">
-      <div class="title">ร้านค้าโดยสัตวแพทย์<br>การันตีสินค้าของแท้ 100% ทุกชิ้น</div>
-      <div class="pages"><strong id="titlePages">หน้า 1 จาก 2</strong></div>
-        <!-- Carousel items -->
-        <div class="carousel-inner">
-          <div id="div-item-moya" class="item active">
-            <div class="container">
-                <div class="views"><strong>เลือกแล้ว <strong id="viewMoya">0</strong> ครั้ง</strong><br>
-                  <span class="join">(เข้าร่วม<span class="join" id="joinMoya"></span>)</span>
-                </div>
-                <div class="container-img"><img style="width: 80%" src="Moyapetcare.jpg" alt="Moya"></div>
-                <hr>
-                <div class="details details_hide">
-                    <p><strong>กลุ่มสินค้าที่มีจำหน่าย</strong></p>
-                    <ul>
-                      <li>มีผลิตภัณฑ์สำหรับทั้งน้องแมว น้องหมา</li>
-                      <li>กลุ่มป้องกันเห็บหมัด และ ถ่ายพยาธิ</li>
-                      <li>อาหารรักษาโรค</li>
-                      <li>แชมพู</li>
-                      <li>ผลิตภัณฑ์ช่องปาก</li>
-                      <li>ผลิตภัณฑ์ช่องหู</li>
-                      <li>สารเสริมบำรุงข้อ</li>
-                      <li>สารเสริมบำรุงขนและผิวหนัง</li>
-                      <li>สารเสริมบำรุงเลือด บำรุงตับ</li>
-                      <li>สารเสริมกระตุ้นภูมิคุ้มกัน</li>
-                      <li>สารเสริมปรับสมดุลลำไส้</li>
-                      <li>สเปรย์ทำแผล และ อุปกรณ์ทำแผล</li>
-                      <li>เจลเสริมพลังงาน และ เจลขับก้อนขน</li>
-                      <li>ขนมแมวเลีย สำหรับบำรุง</li>
-                      <li>ขนม สำหรับบำรุง</li>
-                    </ul>
-                </div>
-                <center><img src="icon/down.png" style="width:6%;" alt="down"/></center>
-                <button style="font-family: 'thaisanslite_r1';" class="button-see-more"><b style="font-size: 24px;">ดูเพิ่มเติม</b></button>
-                <hr>
-                <div class="details_shop details_hide_detail">
-                  <p><strong>รายละเอียดร้านค้า</strong></p>
-                  <ul>
-                    <li>ร้านขายสินค้า และอาหารรักษาโรคสำหรับน้องแมวและน้องหมา คัดสรรโดยสัตวแพทย์ มั่นใจในคุณภาพ</li>
-                    <li>สินค้าของแท้ 100% พร้อมบริการจัดส่งถึงบ้าน</li>
-                    <li>ปรึกษาสัตวแพทย์ฟรีเกี่ยวกับข้อมูลการใช้ ไม่ต้องเสียเวลาไปเดินเลือก เพราะเราจัดรวมของมาไว้ให้เลือก Shopping แล้ว</li>
-                    <li>มีคลินิกหน้าร้านพร้อมให้บริการ 6 สาขา ได้แก่ ไทรม้า(นนทบุรี) , บางศรีเมือง(นนทบุรี) , เสนานิคม (กรุงเทพ) , ปากน้ำ (สมุทรปราการ) , เจ้าคุณทหารลาดกระบัง (กรุงเทพ) , ประชาอุทิศ (สมุทรปราการ)</li>
-                  </ul>
-                </div>
-                <center><img src="icon/down.png" style="width:6%;" alt="down"/></center>
-                <button style="font-family: 'thaisanslite_r1';" class="button-see-more-detail-shop"><b style="font-size: 24px;">ดูเพิ่มเติม</b></button>
-                <hr>
-                <a onclick="updateViewPet('MOYA')" class="button"><b style="font-size: 24px;">ไปที่ร้านค้า</b></a>
-            </div>
-          </div>
-          <div id="div-item-ncham" class="item">
-            <div class="container">
-                <div class="views"><strong>เลือกแล้ว <strong id="viewNCHAM">0</strong> ครั้ง</strong><br>
-                  <span class="join">(เข้าร่วม<span class="join" id="joinNCHAM"></span>)</span>
-                </div>
-                <div class="container-img"><img src="logo-N.cham.png" alt="NCHAM"></div>
-                <hr>
-                <div class="details details_hide">
-                    <p><strong>กลุ่มสินค้าที่มีจำหน่าย</strong></p>
-                    <ul>
-                      <li>มีผลิตภัณฑ์สำหรับทั้งน้องแมว น้องหมา</li>
-                      <li>อาหารสูตรรักษาโรค</li>
-                      <li>อาหารเสริมบำรุงไต</li>
-                      <li>กลุ่มป้องกันเห็บหมัด</li>
-                      <li>อาหารเสริมปรับสมดุลลำไส้</li>
-                      <li>อาหารเสริมกระตุ้นภูมิคุ้มกัน</li>
-                      <li>อาหารเสริมบำรุงตับ</li>
-                      <li>ผลิตภัณฑ์บำรุงขนและผิวหนัง</li>
-                      <li>แชมพูกำจัดเชื้อรา ยีสต์ แบคทีเรีย</li>
-                      <li>สเปรย์ทำแผล และผลิตภัณฑ์สำหรับทำแผล</li>
-                      <li>อาหารเสริมบำรุงข้อ</li>
-                      <li>ผลิตภัณฑ์ช่องปาก</li>
-                      <li>ผลิตภัณฑ์ช่องหู</li>
-                      <li>อาหารสูตรป้องกันโรค</li>
-                      <li>อาหารสูตรตามสายพันธุ์ และตามช่วงวัย</li>
-                      <li>อาหารเสริมบำรุงเลือด</li>
-                      <li>อาหารเสริมพลังงาน</li>
-                      <li>เจลขับก้อนขน</li>
-                      <li>ขนมแมวเลีย และขนมบำรุงสุขภาพ</li>
-                    </ul>
-                </div>
-                <center><img src="icon/down.png" style="width:6%;" alt="down"/></center>
-                <button style="font-family: 'thaisanslite_r1';" class="button-see-more"><b style="font-size: 24px;">ดูเพิ่มเติม</b></button>
-                <hr>
-                <div class="details_shop details_hide_detail">
-                  <p><strong>รายละเอียดร้านค้า</strong></p>
-                  <ul>
-                    <li>สินค้าทุกชิ้นจัดจำหน่ายโดยสัตวแพทย์</li>
-                    <li>ปรึกษาสัตวแพทย์ฟรีเกี่ยวกับสินค้าและการใช้สินค้า</li>
-                    <li>คะแนนรีวิว 4.9 จาก 5 (จากรีวิวกว่า 196,300 รีวิว)</li>
-                    <li>สินค้าของแท้ 100% จากบริษัทโดยตรง สามารถตรวจสอบได้</li>
-                    <li>จัดส่งสินค้าทุกวัน</li>
-                    <li>ราคาไม่แพง</li>
-                  </ul>
-                </div>
-                <center><img src="icon/down.png" style="width:6%;" alt="down"/></center>
-                <button style="font-family: 'thaisanslite_r1';" class="button-see-more-detail-shop"><b style="font-size: 24px;">ดูเพิ่มเติม</b></button>
-                <hr>
-                <a onclick="updateViewPet('N_CHAM')" class="button"><b style="font-size: 24px;">ไปที่ร้านค้า</b></a>
-            </div>
-          </div>
+    <div id="overlay">
+        <div class="spinner"></div>
+        <br/>
+        Loading...
+    </div>
+    <div class="container">
+      <div class="title">ร้านค้าโดยสัตวแพทย์<br>การันตีสินค้าของแท้ <b style="color: red;">100%</b> ทุกรายการ</div>
+        
+        <div class="row flex-nowrap">
+        <div class="col-md-6" style="padding: 6px;">
+          <a class="btn btn-block btn-lg" style="background-color: #fff;border-color:#ECE0D2;border-radius: 20px;" >
+            <img src="Moyapetcare.jpg" style="width: 100%;margin-bottom: -4px;" alt="Moya" />
+           <hr>
+           <p class="title-animal-type"><strong>รายละเอียดร้านค้าเบื้องต้น</strong></p>
+           <p class="body-animal-type">● ร้านขายสินค้า และอาหารรักษาโรคสำหรับน้องแมวและน้องหมา คัดสรรโดยสัตวแพทย์ มั่นใจในคุณภาพ</p>
+           <p class="body-animal-type">● สินค้าของแท้ 100% พร้อมบริการจัดส่งถึงบ้าน</p>
+           <p class="body-animal-type">● ปรึกษาสัตวแพทย์ฟรีเกี่ยวกับข้อมูลการใช้</p>
+           <p class="body-animal-type">● มีคลินิกหน้าร้านพร้อมให้บริการ 6 สาขา ครอบคลุมกทม.และปริมณฑล</p>
+           <hr>
+           <p class="title-animal-type"><strong>เลือกแล้ว <strong id="viewMoya">0</strong> ครั้ง</strong></p>
+           <p class="title-animal-type"><span class="join">(เข้าร่วม<span class="join" id="joinMoya"></span>)</span></p>
+           <hr style="margin-bottom:8px">
+           <button style="font-family: 'thaisanslite_r1';" class="button-see-more" onclick="updateViewPet('MOYA')"><b style="font-size: 20px;">ดูเพิ่มเติม</b></button>
+          </a>
         </div>
-        <!-- Carousel nav -->
-        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-      </div>
-      
-      <!-- LINKED NAV -->
-      <!-- <ol class="carousel-linked-nav pagination">
-        <li class="active"><a href="#1">SOPet</a></li>
-        <li><a href="#2">Pettinee</a></li>
-      </ol> -->
-      
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/js/bootstrap.min.js"></script>
-    <!-- <script type="text/javascript" src="./bootstrap.min.js"></script> -->
-    <!-- Bootstrap JS -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> -->
-    <!-- Your custom JS -->
+        <div class="col-md-6" style="padding: 6px;">
+          <a class="btn btn-block btn-lg" style="background-color: #fff;border-color:#ECE0D2;border-radius: 20px;" >
+            <img src="logo-N.cham.png" style="width: 40%" alt="NCHAM" />
+           <hr>
+           <p class="title-animal-type"><strong>รายละเอียดร้านค้าเบื้องต้น</strong></p>
+           <p class="body-animal-type">● สินค้าทุกชิ้นจัดจำหน่ายโดยสัตวแพทย์</p>
+           <p class="body-animal-type">● ปรึกษาสัตวแพทย์ฟรีเกี่ยวกับสินค้าและการใช้สินค้า</p>
+           <p class="body-animal-type">● คะแนนรีวิว 4.9 จาก 5 (จากรีวิวกว่า 196,300 รีวิว)</p>
+           <p class="body-animal-type">● สินค้าของแท้ 100% จากบริษัทโดยตรง</p>
+           <p class="body-animal-type" style="height: 54px">● จัดส่งสินค้าทุกวัน</p>
+           <hr>
+           <p class="title-animal-type"><strong>เลือกแล้ว <strong id="viewNCHAM">0</strong> ครั้ง</strong></p>
+           <p class="title-animal-type"><span class="join">(เข้าร่วม<span class="join" id="joinNCHAM"></span>)</span></p>
+           <hr style="margin-bottom:8px">
+           <button style="font-family: 'thaisanslite_r1';" class="button-see-more" onclick="updateViewPet('N_CHAM')"><b style="font-size: 20px;">ดูเพิ่มเติม</b></button>
+          </a>
+        </div>
+        </div>
 
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <!-- <script type="text/javascript" src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/js/bootstrap.min.js"></script> -->
+   
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
-    <script src="liff-config.js?cache=202407030823"></script>
-    <script src="index.js?cache=202407030823"></script>
+    <script src="liff-config.js?cache=202406261824"></script>
+    <script src="index.js?cache=202406261824"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-      <script>
-        function openWebSOPet() {
-            // openExternalBrowser('https://sopet.co');
-            liff.openWindow({
-                    url: 'https://sopet.co', // URL ที่ต้องการเปิด
-                    external: true // เปิดในเบราว์เซอร์ภายนอก
-                });
-        }
-        
-        function openExternalBrowser(url) {
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-            // สำหรับ Android
-            if (/android/i.test(userAgent)) {
-                window.location.href = "intent://" + url.replace(/^https?:\/\//, '') + "#Intent;scheme=https;package=com.android.chrome;end";
-            }
-            // สำหรับ iOS
-            else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                window.location.href = url;
-            }
-            // สำหรับอุปกรณ์อื่นๆ
-            else {
-                window.location.href = url;
-            }
-        }
-
-    $('.button-see-more').click(function() {
-        console.log('button-see-more');
-        if($(this).parent().find('.details_hide').length > 0){
-            $(this).parent().find('.details').removeClass('details_hide');
-            $(this).parent().find('.details').addClass('details_show');
-        }else{
-            $(this).parent().find('.details').removeClass('details_show');
-            $(this).parent().find('.details').addClass('details_hide');
-        }
-    });
-
-    $('.button-see-more-detail-shop').click(function() {
-        console.log('button-see-more-detail-shop');
-        if($(this).parent().find('.details_hide_detail').length > 0){
-            $(this).parent().find('.details_shop').removeClass('details_hide_detail');
-            $(this).parent().find('.details_shop').addClass('details_show_detail');
-        }else{
-            $(this).parent().find('.details_shop').removeClass('details_show_detail');
-            $(this).parent().find('.details_shop').addClass('details_hide_detail');
-        }
-    });
-
-        // invoke the carousel
-// $('#myCarousel').carousel({
-//     interval: 3000
-//   });
-  
-  /* SLIDE ON CLICK */ 
-  
-  $('.carousel-linked-nav > li > a').click(function() {
-    console.log('xxxxxxxxxx');
-      // grab href, remove pound sign, convert to number
-      var item = Number($(this).attr('href').substring(1));
-      console.log(item);
-      // slide to number -1 (account for zero indexing)
-      $('#myCarousel').carousel(item - 1);
-  
-      // remove current active class
-      $('.carousel-linked-nav .active').removeClass('active');
-
-      // add active class to just clicked on item
-      $(this).parent().addClass('active');
-  
-      // don't follow the link
-      return false;
-  });
-  
-  /* AUTOPLAY NAV HIGHLIGHT */
-  
-  // bind 'slid' function
-  $('#myCarousel').bind('slid', function() {
-      // remove active class
-      $('.carousel-linked-nav .active').removeClass('active');
-  
-      // get index of currently active item
-      var idx = $('#myCarousel .item.active').index();
-      // console.log('myCarousel bind idx : '+idx);
-      var idxMax = $('#myCarousel .item').length;
-      // console.log(idxMax);
-      var titlePages = document.getElementById("titlePages");
-      titlePages.innerHTML = 'หน้า '+(idx+1)+' จาก '+idxMax;
-
-      // select currently active item and add active class
-      $('.carousel-linked-nav li:eq(' + idx + ')').addClass('active');
-  
-  });
-    </script>
 </body>
 </html>

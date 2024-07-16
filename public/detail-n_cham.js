@@ -84,13 +84,9 @@ async function countViewPet(){
             } else {
                 console.log("Success:", response);
 
-                var viewMoya = document.getElementById("viewMoya");
-                viewMoya.innerHTML = response.viewMOYA;
                 var viewNCHAM = document.getElementById("viewNCHAM");
                 viewNCHAM.innerHTML = response.viewNCHAM;
 
-                var joinMoya = document.getElementById("joinMoya");
-                joinMoya.innerHTML = response.joinMOYA;
                 var joinNCHAM = document.getElementById("joinNCHAM");
                 joinNCHAM.innerHTML = response.joinNCHAM;
 
@@ -124,7 +120,7 @@ async function updateViewPet(partner){
             displayName: profile.displayName,
             statusMessage: profile.statusMessage,
             pictureUrl: profile.pictureUrl,
-            state: "CLICK",
+            state: "SELECT",
             partner: partner
         };
 
@@ -137,8 +133,17 @@ async function updateViewPet(partner){
                 swalError('เกิดข้อผิดพลาดกรุณาลองใหม่อีกครั้ง','');
             } else {
                 console.log("Success:", response);
-                var url = "detail-"+partner.toLowerCase()+".html";
-                window.location.href = url;
+                if('MOYA'==partner){
+                    liff.openWindow({
+                        url: 'https://crm-thailand.getcode.dev/shop/1156/shopping',
+                        external: false
+                    });
+                }else if('N_CHAM'==partner){
+                    liff.openWindow({
+                        url: 'https://s.shopee.co.th/6pfzKcIDNt',
+                        external: true
+                    });
+                }
             }
         });
 

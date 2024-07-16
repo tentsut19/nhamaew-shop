@@ -93,6 +93,22 @@ async function countViewPet(){
                 joinMoya.innerHTML = response.joinMOYA;
                 var joinNCHAM = document.getElementById("joinNCHAM");
                 joinNCHAM.innerHTML = response.joinNCHAM;
+                
+                var viewPettinee = document.getElementById("div-item-pettinee");
+                var divSOPet = document.getElementById("div-item-sopet");
+                // console.log(response.id % 2);
+                // if(response.id % 2 == 0){
+                //     divSOPet.setAttribute("class", "item active");
+                //     // viewPettinee.classList.remove("active");
+                // }else{
+                //     viewPettinee.setAttribute("class", "item active");
+                //     // divSOPet.classList.remove("active");
+                // }
+
+                var idxMax = $('#myCarousel .item').length;
+                // console.log(idxMax);
+                var titlePages = document.getElementById("titlePages");
+                titlePages.innerHTML = 'ร้านที่ '+(idx+1)+' จาก '+idxMax;
 
             }
         });
@@ -137,8 +153,17 @@ async function updateViewPet(partner){
                 swalError('เกิดข้อผิดพลาดกรุณาลองใหม่อีกครั้ง','');
             } else {
                 console.log("Success:", response);
-                var url = "detail-"+partner.toLowerCase()+".html";
-                window.location.href = url;
+                if('MOYA'==partner){
+                    liff.openWindow({
+                        url: 'https://crm-thailand.getcode.dev/shop/1156/shopping',
+                        external: false
+                    });
+                }else if('N_CHAM'==partner){
+                    liff.openWindow({
+                        url: 'https://s.shopee.co.th/6pfzKcIDNt',
+                        external: true
+                    });
+                }
             }
         });
 
