@@ -74,7 +74,9 @@ async function countViewPet(){
             lineUserId: profile.userId,
             displayName: profile.displayName,
             statusMessage: profile.statusMessage,
-            pictureUrl: profile.pictureUrl
+            pictureUrl: profile.pictureUrl,
+            state: "VIEW_DETAIL",
+            partner: "MOYA"
         };
         
         postData(url, data, function(error, response) {
