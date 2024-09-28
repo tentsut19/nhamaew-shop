@@ -1,7 +1,7 @@
 const LIFF_ID = '2005794867-OZWq52yD'; // prod
 // const LIFF_ID = '2002126306-rG8n6Bnp'; // dev
 const PROD = true;
-const DOMAIN = "https://test-api.net/";
+const DOMAIN = "https://nhamaew.net/";
 // const DOMAIN = "http://localhost:5000/";
 // const DOMAIN = "https://test.test-api.net/";
 
